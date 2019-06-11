@@ -14,3 +14,5 @@ source activate
 module load  cuda/cuda-10.0.130
 module load cudnn/cudnn-7.4.2-cuda-10.0.130
 export HDF5_USE_FILE_LOCKING='FALSE'
+
+#https://github.com/qqwweee/keras-yolo3/issues/443
