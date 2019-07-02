@@ -10,7 +10,6 @@ seg=int(math.ceil(len(l)/batch_size))
 
 for i in range(seg):
     foldername='/home/shchang/scratch/cvpr/data/img/'+'img'+str(i)
-    print(foldername)
     if os.path.exists(foldername)== False :
         os.mkdir(foldername)
    
@@ -27,7 +26,10 @@ for i in dividors:
         print(filename)
         src_path=source+filename
         dest_path=dest+filename
+        print(src_path)
         print(dest_path)
-        shutil.move(src_path, dest_path)
+        #shutil.move(src_path, dest_path)
+        shutil.copy(src_path, dest_path)
+        os.remove(src_path)
         print('------------')
-    serialNum=serialNum+1    
+    serialNum=serialNum+1
